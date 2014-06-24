@@ -8,7 +8,7 @@ function checkUpdate() {
   for (var i=0; i<theAnnouncements.length; i++) {
     var theBlogPost = theAnnouncements[i];
     if (theBlogPost.getLastEdited() > lastUpdate) {     
-      var theEmailTemplate = HtmlService.createTemplateFromFile('blogTemplate');
+      var theEmailTemplate = HtmlService.createTemplateFromFile('emailTemplate');
       
       theEmailTemplate.siteURL = theSite.getUrl();
       theEmailTemplate.blogURL = theBlogPost.getUrl();
