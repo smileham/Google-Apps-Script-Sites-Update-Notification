@@ -11,9 +11,11 @@ function checkUpdate() {
       var theEmailTemplate = HtmlService.createTemplateFromFile('emailTemplate');
       
       theEmailTemplate.siteURL = theSite.getUrl();
+      theEmailTemplate.siteTitle = theSite.getTitle();
       theEmailTemplate.blogURL = theBlogPost.getUrl();
       theEmailTemplate.blogTitle = theBlogPost.getTitle();
       theEmailTemplate.blogContent = theBlogPost.getHtmlContent();
+      theEmailTemplate.emailFooter = PropertiesService.getScriptProperties().getProperty("emailFooter");
       theEmailTemplate.blogDate = theBlogPost.getLastEdited().toUTCString();
       var authors = theBlogPost.getAuthors();
       var blogAuthors = "";
