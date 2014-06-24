@@ -1,0 +1,19 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div style="background-color:#e4e1ca; padding:10px">
+    <div style="border-radius:5px;background-color:#00a9ab;min-height:50px; line-height:50px; padding:0 10px">
+    <h1 style="padding:0; margin:0;"><a href="<?=siteURL?>" style="text-decoration:none; color: white"><?=siteTitle?> Update</a></h1>
+    </div>
+    <div style="background-color:white; border-radius:5px; margin:10px 0; padding:10px">
+    <h2><a href="<?=blogURL?>" style="color:black"><?=blogTitle?></a></h2>
+    <em><?=blogAuthor?> - <?=blogDate?></em>
+    <?!=blogContent?>
+    </div>
+    <div style="border-radius:5px; background-color:#00a9ab; min-height:50px; padding:0 10px; line-height:50px; color:white">
+    <?=emailFooter?>
+    </div>
+    </div>
+  </body>
+</html>
