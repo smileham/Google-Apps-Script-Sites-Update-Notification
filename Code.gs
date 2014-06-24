@@ -28,7 +28,7 @@ function checkUpdate() {
       theEmailTemplate.blogAuthor = blogAuthors;
       
       MailApp.sendEmail(PropertiesService.getScriptProperties().getProperty("emailAddress"),
-                        "["+theSite.getName()+"] "+theBlogPost.getTitle(), "",
+                        "["+theSite.getTitle()+"] "+theBlogPost.getTitle(), "",
         {htmlBody:theEmailTemplate.evaluate().getContent(), noReply:true});
     }
   }
